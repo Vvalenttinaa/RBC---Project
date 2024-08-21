@@ -1,0 +1,26 @@
+<div class="modal-dialog">
+  <div
+    class="modal-header"
+    style="font-size: large; font-weight: bold; padding: 20px"
+  >
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div
+    class="modal-body"
+    style="padding: 20px; display: flex; align-items: flex-start"
+  >
+    <ng-content select="[body]"></ng-content>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn"
+      style="border: none; background-color: transparent"
+      (click)="onClose()"
+    >
+      Cancel
+    </button>
+
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>

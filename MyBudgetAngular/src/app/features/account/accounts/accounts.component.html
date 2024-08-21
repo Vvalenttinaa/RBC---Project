@@ -1,0 +1,32 @@
+@for (account of accounts; track $index) {
+<div class="container jc-sb ai-c">
+  <span>{{ account.name }}</span>
+  <div class="column ai-e">
+    <span
+      >{{ account.balance | number: "1.2-2" }}
+      {{ account.currency.toLocaleUpperCase() }}</span
+    >
+    @if(!isEqual(account.currency, userCurrency)){
+    <span class="small-font"
+      >{{ account.convertedAmount | number: "1.2-2" }}
+      {{ userCurrency.toLocaleUpperCase() }}</span
+    >
+    }
+  </div>
+</div>
+<hr />
+}
+<div
+class="jc-sb ai-bl"
+
+>
+  <button class="btn" style="margin-top: 5px" (click)="addAccount()">
+    New account
+  </button>
+  <mat-paginator
+    [length]="20"
+    [pageSize]="pageSize"
+    (page)="onPageChange($event)"
+  >
+  </mat-paginator>
+</div>

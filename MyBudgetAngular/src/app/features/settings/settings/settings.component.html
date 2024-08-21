@@ -1,0 +1,23 @@
+<div class="container jc-sb">
+  <span>Default currency</span>
+  <div class="ai-c">
+    <form [formGroup]="settingsForm">
+      <select id="currency" formControlName="currency">
+        @for(currency of currencies; track $index){
+        <option [value]="currency">
+          {{ currency }}
+        </option>
+        }
+      </select>
+    </form>
+  </div>
+</div>
+<hr />
+<span><a (click)="deleteAll()">Delete all data</a></span>
+<hr />
+<div class="jc-sb">
+  <span>Exhange rate updated</span>
+  @if (user) {
+  <span>{{ user.updatedAt | date: "dd.MM.yyyy" }}</span>
+  }
+</div>

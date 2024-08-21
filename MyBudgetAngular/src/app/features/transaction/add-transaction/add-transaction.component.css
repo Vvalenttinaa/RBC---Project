@@ -1,0 +1,59 @@
+span {
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 33px;
+}
+
+#type {
+  height: 33px;
+  width: 100px;
+}
+
+#account {
+  height: 33px;
+  width: 100px;
+  width: 150px;
+  margin-left: 20px;
+  max-height: 30px;
+}
+
+option {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.input-desc {
+  width: 460px;
+}
+
+.row-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.pad-nopadd {
+  padding-right: 5px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 720px) {
+  .input-desc {
+    width: 200px;
+  }
+
+  .row-col {
+    flex-direction: column;
+  }
+
+  .pad-nopadd {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 22px;
+  }
+}

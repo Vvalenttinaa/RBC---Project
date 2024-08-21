@@ -1,0 +1,40 @@
+<div class="container">
+  <div>
+    @for (t of transactions; track $index) {
+    <div class="container-transaction jc-sb ai-c">
+      <div class="column">
+        <span>{{ t.description }}</span
+        ><span class="small-font" style="padding-top: 5px;"> {{ t.accountName }}</span>
+      </div>
+      <div class="column ai-e">
+        <span>{{ t.amount }} {{ t.accountCurrency }}</span>
+        @if(!isEqual(t.accountCurrency, userCurrency)){
+        <span class="small-font"
+          >{{ t.userAmount }} {{ userCurrency.toLocaleUpperCase() }}</span
+        >}
+      </div>
+    </div>
+    <hr />
+    }
+    <div class="jc-sb ai-b">
+      <button class="btn" style="margin-top: 5px" (click)="addTransaction()">
+        Create transaction
+      </button>
+      <mat-paginator
+        [length]="20"
+        [pageSize]="pageSize"
+        (page)="onPageChange($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+  <form [formGroup]="form">
+    <select id="acc" formControlName="acc">
+      @for (option of options; track $index) {
+      <option [value]="option">
+        {{ option }}
+      </option>
+      }
+    </select>
+  </form>
+</div>

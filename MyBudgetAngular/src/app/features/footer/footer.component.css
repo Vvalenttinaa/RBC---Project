@@ -1,0 +1,31 @@
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-left: clamp(10px, 20vw, 30%);
+  margin-right: clamp(10px, 20vw, 30%);
+  height: 60px;
+}
+
+.container{
+    position: absolute;
+    bottom: 8px;
+    left: 4px;
+    width: 98%;
+    height: 7%;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer{
+    margin-left: clamp(5px, 10vw, 5%);
+    margin-right: clamp(5px, 10vw, 5%);
+  }
+}
+
+@media screen and (max-width: 590px) {
+    span{
+      font-size: 10px;
+    }
+}

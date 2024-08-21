@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  border-radius: 15px;
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-wrap: nowrap;
+}
+
+.btn:hover {
+  background-color: #c5dcf5; 
+  color: rgb(66, 62, 62); 
+  cursor: pointer; 
+}
+
+@media screen and (max-width: 590px) {
+  button {
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-shape: 20px;
+}
+
+.cdk-overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-save{
+  border: 3px solid black; font-weight: bold
+}
+
+.row{
+  display: flex; flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-c{
+  align-items: center;
+}
+
+.ai-e{
+  align-items: flex-end
+}
+.ai-bl{
+align-items: baseline;
+}
+
+.jc-sb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-font{
+  font-size: 12px; color: rgb(56, 56, 56);
+}

@@ -1,0 +1,59 @@
+<app-modal-layout>
+  <ng-container header>New Transaction</ng-container>
+  <ng-container body>
+    <form
+      [formGroup]="form"
+    >
+      <div class="column">
+        <div class="row ai-c">
+          <span>Description: </span>
+          <input
+            type="text"
+            formControlName="description"
+          />
+        </div>
+        <div
+        class="row jc-sb ai-c"
+          style="
+            width: 184px;
+          "
+        >
+          <span>Type: </span>
+          <select id="type" formControlName="type">
+            @for (type of types; track $index) {
+            <option [value]="type">
+              {{ type }}
+            </option>
+            }
+          </select>
+        </div>
+        <div
+        class="row-col jc-sb "
+        >
+          <div class="row ai-c">
+            <span>Account: </span>
+            <select id="account" formControlName="accountId">
+              @for (account of accounts; track $index) {
+              <option [value]="account.id">
+                {{ account.name }}
+              </option>
+              }
+            </select>
+          </div>
+          <div class="row ai-c ">
+            <span class="pad-nopadd">Amount:</span
+            ><input type="text" style="width: 170px" formControlName="amount" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <button
+    footer
+    type="button"
+    class="btn btn-save"
+    (click)="save()"
+  >
+    Create Transaction
+  </button>
+</app-modal-layout>

@@ -1,0 +1,35 @@
+<app-modal-layout>
+  <ng-container header>New Account</ng-container>
+  <ng-container body>
+    <form class="column" [formGroup]="accountForm">
+      <div class="row jc-sb name">
+        <span>Name:</span>
+        <input type="text" class="name-input" formControlName="name" />
+      </div>
+      <div class="row jc-sb ai-c" style="width: 160px; height: 25px">
+        <span>Currency:</span
+        ><select id="currency" formControlName="currency" style="width: 77px">
+          @for (currency of currencies; track $index) {
+          <option [value]="currency">
+            {{ currency }}
+          </option>
+          }
+        </select>
+      </div>
+      <div class="row jc-sb balance">
+        <span>Balance:</span>
+        <input type="text" style="width: 200px" formControlName="balance" />
+      </div>
+    </form>
+  </ng-container>
+  <button
+    footer
+    type="button"
+    class="btn"
+    style="border: 3px solid black; font-weight: bold"
+    (click)="save()"
+    [disabled]="!accountForm.valid"
+  >
+    Create Account
+  </button>
+</app-modal-layout>

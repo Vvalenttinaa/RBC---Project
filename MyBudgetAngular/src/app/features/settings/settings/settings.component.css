@@ -1,0 +1,25 @@
+#currency {
+  border: none;
+  outline: none;
+}
+
+a:hover {
+  color: rgb(98, 7, 7);
+  cursor: pointer;
+}
+
+.container {
+  width: 520px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 300px;
+  }
+
+  select {
+    max-height: 100px;
+  }
+}

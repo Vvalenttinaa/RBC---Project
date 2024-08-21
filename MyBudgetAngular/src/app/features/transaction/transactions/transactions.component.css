@@ -1,0 +1,39 @@
+#acc {
+  border-radius: 2rem;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-transaction {
+  width: 520px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container > div {
+    order: 2;
+  }
+
+  .container > form {
+    order: 1;
+  }
+  #acc{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 590px) {
+    .container-transaction{
+        width: 300px;
+    }
+}
